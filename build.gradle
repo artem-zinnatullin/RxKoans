@@ -1,0 +1,19 @@
+apply from: 'dependencies.gradle'
+
+buildscript {
+    apply from: 'dependencies.gradle'
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath gradlePlugins.kotlin
+    }
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+    }
+}

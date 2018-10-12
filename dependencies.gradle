@@ -1,0 +1,23 @@
+ext.versions = [
+        kotlin  : '1.2.71',
+
+        rxJava  : '2.2.2',
+        rxKotlin: '2.3.0',
+
+        junit   : '4.12',
+]
+
+ext.libraries = [
+        kotlinStdlib: "org.jetbrains.kotlin:kotlin-stdlib:$versions.kotlin",
+
+        rxJava      : "io.reactivex.rxjava2:rxjava:$versions.rxJava",
+        rxKotlin    : "io.reactivex.rxjava2:rxkotlin:$versions.rxKotlin",
+]
+
+ext.testLibraries = [
+        junit4: "junit:junit:$versions.junit",
+]
+
+ext.gradlePlugins = [
+        kotlin: "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin",
+]

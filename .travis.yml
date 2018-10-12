@@ -1,0 +1,20 @@
+jdk:
+  - oraclejdk8
+
+# Prevent Travis from running automatic project install.
+install:
+  - echo "noop"
+
+script:
+  - COM_ARTEMZIN_RXKOANS_TEST_TARGET=provided-solutions ./gradlew build
+
+before_cache:
+  - rm -f  "$HOME"/.gradle/caches/modules-2/modules-2.lock
+
+cache:
+  directories:
+    - $HOME/.gradle/caches
+    - $HOME/.gradle/wrapper
+
+notifications:
+  email: false

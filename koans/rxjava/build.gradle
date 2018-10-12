@@ -1,0 +1,19 @@
+apply plugin: 'kotlin'
+
+dependencies {
+    testImplementation libraries.kotlinStdlib
+    testImplementation libraries.rxJava
+    testImplementation libraries.rxKotlin
+    testImplementation testLibraries.junit4
+}
+
+test {
+    inputs.property('testtarget') {
+        System.getenv('COM_ARTEMZIN_RXKOANS_TEST_TARGET')
+    }
+
+    testLogging {
+        events 'passed', 'skipped', 'failed', 'standardOut', 'standardError'
+        exceptionFormat 'FULL'
+    }
+}
