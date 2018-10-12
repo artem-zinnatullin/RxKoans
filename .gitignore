@@ -8,5 +8,3 @@ out/
 
 .gradle
 build/
-
-*.jar
