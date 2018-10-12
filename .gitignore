@@ -1,0 +1,12 @@
+/.idea/
+*.iml
+local.properties
+!.idea/codeStyleSettings.xml
+out/
+
+.DS_Store
+
+.gradle
+build/
+
+*.jar
